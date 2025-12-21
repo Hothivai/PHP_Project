@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('model/connect.php'); // Giả sử file này đã có
+require_once('model/connect.php'); 
 
 // Kiểm tra nếu không có sản phẩm được chọn hoặc không có tổng tiền
 if (!isset($_SESSION['selected_total']) || $_SESSION['selected_total'] == 0 || !isset($_SESSION['selected_count']) || $_SESSION['selected_count'] == 0 || !isset($_SESSION['selected_ids'])) {
@@ -11,7 +11,6 @@ if (!isset($_SESSION['selected_total']) || $_SESSION['selected_total'] == 0 || !
 $selected_total = $_SESSION['selected_total'];
 $selected_ids = $_SESSION['selected_ids'];
 
-// --- Xử lý POST (Khi người dùng nhấn "Đặt hàng") ---
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Lấy thông tin từ form
     $name = $_POST['name'];
@@ -19,14 +18,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $phone = $_POST['phone'];
     $address = $_POST['address'];
     
-    // Đảm bảo total là số (sử dụng floatval)
     $total_order = floatval($selected_total);
 
+    $user_id = isset($_SESSION['id-user']) ? intval($_SESSION['id-user']) : 0;
+    
     $date_order = date('Y-m-d H:i:s');
-    $user_id = 0; 
     $status = 0;
-
-    // 1. Lưu thông tin đơn hàng vào bảng `orders` (CHỈ DÙNG 4 CỘT CÓ TRONG DB)
     $sql_order = "INSERT INTO orders (total, date_order, status, user_id) 
                   VALUES (?, ?, ?, ?)";
     $stmt_order = $conn->prepare($sql_order);
@@ -67,14 +64,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         unset($_SESSION['selected_count']);
         unset($_SESSION['selected_ids']);
 
-        // 5. CHUYỂN HƯỚNG THẲNG ĐẾN TRANG CHI TIẾT ĐƠN HÀNG (KHÔNG DÙNG POPUP)
+        // 5. CHUYỂN HƯỚNG THẲNG ĐẾN TRANG CHI TIẾT ĐƠN HÀNG
         if (!$errors) {
             if (empty($_SESSION['cart'])) {
                 unset($_SESSION['cart']);
             }
             
             // Lưu thông tin khách hàng vào Session TẠM THỜI
-            // (vì bạn không lưu chúng vào bảng orders)
             $_SESSION['temp_customer_info'] = [
                 'name' => $name,
                 'email' => $email,
@@ -82,12 +78,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 'address' => $address,
             ];
 
-            // *** ĐÃ SỬA: Chuyển hướng thẳng đến order-detail.php ***
             header("Location: order-detail.php?order_id=$order_id");
             exit();
 
         } else {
-             echo "<script>alert('Đặt hàng thất bại do lỗi chi tiết đơn hàng. Vui lòng thử lại!'); window.location.href='view-cart.php';</script>";
+              echo "<script>alert('Đặt hàng thất bại do lỗi chi tiết đơn hàng. Vui lòng thử lại!'); window.location.href='view-cart.php';</script>";
         }
         exit();
 

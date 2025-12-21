@@ -57,9 +57,12 @@
                     if(isset($_SESSION['username']))
                     {
                 ?>
-                <i class="fa fa-user fa-lg"></i>
-                <span><?php echo $_SESSION['username']?></span> &nbsp;
-                <span><i class="fa fa-sign-out"></i><a href="../user/logout.php"> Đăng xuất </a></span>
+                <a href="user/profile.php">
+                    <i class="fa fa-user fa-lg"></i>
+                    <span><?php echo $_SESSION['username']?></span>
+                </a>
+                &nbsp;
+                <span><i class="fa fa-sign-out"></i><a href="user/logout.php"> Đăng xuất </a></span>
                 <?php   }
                     else {
             ?>

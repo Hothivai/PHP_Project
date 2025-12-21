@@ -2,6 +2,11 @@
 session_start();
 require_once('model/connect.php');
 
+if (!isset($_SESSION['id-user'])) { 
+    echo "<script>alert('Bạn cần đăng nhập để thêm sản phẩm vào giỏ hàng.'); window.location.href='login.php';</script>";
+    exit(); 
+}
+
 // Kiểm tra có id sản phẩm hay không
 if (!isset($_GET['id'])) {
     header("Location: index.php");

@@ -3,9 +3,6 @@
     error_reporting(E_ALL ^ E_DEPRECATED);
     require_once '../model/connect.php';
 
-    // -----------------------------------------------------
-    // BƯỚC 1: NHÚNG VÀ KHAI BÁO PHPMailer (Tương tự register-back.php)
-    // -----------------------------------------------------
     require '../lib/PHPMailer/Exception.php'; 
     require '../lib/PHPMailer/PHPMailer.php';
     require '../lib/PHPMailer/SMTP.php';
@@ -33,9 +30,6 @@
         $email = isset($_POST['email']) ? $_POST['email'] : '';
         $email = mysqli_real_escape_string($conn, $email);
         
-        // -----------------------------------------------------
-        // BƯỚC 2: KIỂM TRA EMAIL CÓ TỒN TẠI HAY KHÔNG
-        // -----------------------------------------------------
         $sql_check = "SELECT id, username FROM users WHERE email = '$email'";
         $res_check = mysqli_query($conn, $sql_check);
         
@@ -45,11 +39,9 @@
             $user_id = $user_data['id'];
             $username = $user_data['username'];
             
-            // -----------------------------------------------------
-            // BƯỚC 3: TẠO VÀ CẬP NHẬT MẬT KHẨU MỚI
-            // -----------------------------------------------------
+            
             $new_password = generateRandomPassword(8); // Tạo mật khẩu 8 ký tự
-            $hashed_new_password = md5($new_password); // Mã hóa MD5 (Tương tự register-back.php)
+            $hashed_new_password = md5($new_password); // Mã hóa MD5 
 
             $sql_update = "UPDATE users SET password = '$hashed_new_password' WHERE id = $user_id";
             $res_update = mysqli_query($conn, $sql_update);
@@ -64,8 +56,8 @@
                     $mail->isSMTP();
                     $mail->Host       = 'smtp.gmail.com';          
                     $mail->SMTPAuth   = true;                         
-                    $mail->Username   = 'hothivai22@gmail.com'; // **CHỈNH SỬA THÔNG TIN EMAIL CỦA BẠN**
-                    $mail->Password   = 'glbi yqvn uqbu noeo';  // **CHỈNH SỬA MẬT KHẨU ỨNG DỤNG CỦA BẠN**
+                    $mail->Username   = 'hothivai22@gmail.com'; 
+                    $mail->Password   = 'glbi yqvn uqbu noeo';  
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
                     $mail->Port       = 465;                          
                     $mail->CharSet = 'UTF-8';

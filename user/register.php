@@ -37,7 +37,7 @@
                                     <div class="form-group">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-user-circle"></i></span>
-                                            <input type="text" class="form-control" name="fullname" placeholder="Nhập họ tên đầy đủ của bạn" required />
+                                            <input type="text" class="form-control" name="fullname" placeholder="Nhập họ tên đầy đủ của bạn" required/>
                                         </div>
                                     </div><!-- /form-group -->
 

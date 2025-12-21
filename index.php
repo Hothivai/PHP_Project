@@ -80,8 +80,6 @@
                             <label for="status_filter" style="font-weight: normal;">Tình trạng:</label>
                             <select name="status_filter" class="form-control">
                                 <option value="">-- Tất cả --</option>
-                                <option value="con_hang" <?php echo (isset($_GET['status_filter']) && $_GET['status_filter'] == 'con_hang') ? 'selected' : ''; ?>>Còn hàng</option>
-                                <option value="het_hang" <?php echo (isset($_GET['status_filter']) && $_GET['status_filter'] == 'het_hang') ? 'selected' : ''; ?>>Hết hàng</option>
                             </select>
                         </div>
 

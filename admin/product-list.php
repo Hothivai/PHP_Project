@@ -9,8 +9,8 @@
 </head>
 <body>
  <?php
-// include 'header.php';
-require_once('../model/header.php');
+//  include 'header.php';
+// require_once('../model/header.php');
 // require_once("../model/connect.php");
 require_once('../model/connect.php');
 error_reporting(2);
@@ -52,6 +52,9 @@ alert(\"Thêm sản phẩm thất bại!\");
                 <h1 class="page-header"> Danh sách sản phẩm </h1>
             </div><!-- /.col -->
             <div class="col-lg-6 col-md-6 col-sm-6 " style="padding-top: 30px;">
+                <a href="../index.php" class="btn btn-primary">
+                    Quay lại trang chủ
+               </a>
                <a href="product-add.php" class="btn btn-success add-btn">
                   <i class="fa fa-plus-circle"></i> Thêm sản phẩm mới
                </a>
