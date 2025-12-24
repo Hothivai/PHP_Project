@@ -7,13 +7,15 @@
                 style="visibility: visible;">
                 <div class="footer_contacts">
                     <h2 style="color: #fbdd12;">Giới thiệu</h2>
-                    <p style="line-height: 28px; color: #ffffff !important;">Ra đời từ năm 2017, chỉ từ một cửa hàng
-                        thời trang nhỏ, đến nay <span style="font-weight: bold; color: #fbdd12;">VAIFHION</span> đã
-                        không ngừng phát triển và trở thành một hệ thống cửa hàng chuyên kinh doanh thời trang trẻ, là
-                        một trong những thương hiệu thời trang hàng đầu tại Đà Nẵng.</p>
+                    <p style="line-height: 28px; color: #ffffff !important;">
+                        Ra đời từ năm 2025, khởi nguồn từ khát vọng mang đến không gian nghỉ dưỡng tinh tế, 
+                        đến nay <span style="font-weight: bold; color: #fbdd12;">VAI HOTEL</span> đã 
+                        không ngừng hoàn thiện để trở thành một điểm đến lưu trú đẳng cấp, là 
+                        một trong những thương hiệu khách sạn nghỉ dưỡng hàng đầu tại Đà Nẵng.
+                    </p>
                     <p style="margin: 12px 0px 2px;"><span>Mọi phản ánh xin liên hệ:</span></p>
                     SĐT: 0397.450.200<br>
-                    Email: vaifashion2712@gmail.com<br>
+                    Email: vaihotel2712@gmail.com<br>
                     <!-- <a href="http://online.gov.vn/CustomWebsiteDisplay.aspx?DocId=30220&#10;" target="_blank"><img src="images/da thong bao.png" height="60px" border="0"></a> -->
                 </div>
             </div>
@@ -24,21 +26,17 @@
                 <div class="footer_contacts">
                     <h2 style="color: #fbdd12;">Dịch vụ khách hàng</h2>
                     <ul class="">
-                        <li class="wow rotateInUpLeft" style="visibility: visible;"> <a href="#">Cơ chế đặt hàng trực
-                                tuyến</a></li>
+                        <li class="wow rotateInUpLeft" style="visibility: visible;"> <a href="#">Hệ thống đặt phòng trực tuyến</a></li>
 
-                        <li class="wow rotateInUpLeft" style="visibility: visible;"> <a href="#">Chính Sách Khách
-                                Hàng</a></li>
+                        <li class="wow rotateInUpLeft" style="visibility: visible;"> <a href="#">Quy định chung của khách sạn</a></li>
 
-                        <li class="wow rotateInUpLeft" style="visibility: visible;"> <a href="#">Chính sách vận chuyển
-                                và thanh toán</a></li>
+                        <li class="wow rotateInUpLeft" style="visibility: visible;"> <a href="#">Chính sách nhận & trả phòng</a></li>
 
-                        <li class="wow rotateInUpLeft" style="visibility: visible;"> <a href="#">Chính sách bảo hành và
-                                đổi trả sản phẩm</a></li>
+                        <li class="wow rotateInUpLeft" style="visibility: visible;"> <a href="#">Chính sách hủy và hoàn tiền</a></li>
 
-                        <li class="wow rotateInUpLeft" style="visibility: visible;"> <a href="#">Khuyến mãi</a></li>
+                        <li class="wow rotateInUpLeft" style="visibility: visible;"> <a href="#">Ưu đãi & Gói nghỉ dưỡng</a></li>
 
-                        <li class="wow rotateInUpLeft" style="visibility: visible;"> <a href="#">Chính sách bảo mật</a>
+                        <li class="wow rotateInUpLeft" style="visibility: visible;"> <a href="#">Chính sách quyền riêng tư</a>
                         </li>
                     </ul>
                 </div>
@@ -53,13 +51,13 @@
                         <li class="wow rotateInUpLeft" style="visibility: visible;"><span>Trụ sở:</span> 99 Tô Hiến
                             Thành, Sơn Trà, Đà Nẵng</li>
                         <li class="wow rotateInUpLeft" style="visibility: visible;"><span>Email:</span>
-                            vaifashion2712@gmail.com</li>
+                            vaihotel2712@gmail.com</li>
                         <li class="wow rotateInUpLeft" style="visibility: visible;"><span>Website:</span> <a
-                                href="https://www.mylishop.com.vn">MyLiShop.com.vn</a></li>
-                        <li class="wow rotateInUpLeft" style="visibility: visible;"><span>Facebook:</span> VAIFASHION</li>
+                                href="https://www.mylishop.com.vn">VAIhotel.com.vn</a></li>
+                        <li class="wow rotateInUpLeft" style="visibility: visible;"><span>Facebook:</span> VAIHOTEL</li>
                         <li class="wow rotateInUpLeft" style="visibility: visible;"><span>Hỗ trợ:</span> 0397.450.200
                         </li>
-                        <li class="wow rotateInUpLeft" style="visibility: visible;"><span>Đặt hàng:</span> 0522.980.270
+                        <li class="wow rotateInUpLeft" style="visibility: visible;"><span>Đặt phòng:</span> 0522.980.270
                         </li>
                     </ul>
                 </div>
@@ -88,7 +86,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-12">
-                        <p role="contentinfo">VAIFASHION.com.vn © 2017. All Rights Reserved.</p>
+                        <p role="contentinfo">VAIHOTEL.com.vn © 2017. All Rights Reserved.</p>
                         <!-- Design by MyLiShop -->
                     </div>
                 </div>

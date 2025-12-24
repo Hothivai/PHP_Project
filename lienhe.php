@@ -49,10 +49,6 @@
     <!-- /header -->
     
     <div class="container">
-        <ul class="breadcrumb">
-            <li><a href="../index.php"> Trang chủ </a></li>
-            <li> Liên hệ </li>
-        </ul><!-- /breadcrumb -->
         <div class= "row">
             <div class= "col-md-12 col-sm-16 col-xs-12">
                 <div class= "titles">

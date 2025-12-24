@@ -82,7 +82,7 @@ $user_info = mysqli_fetch_assoc($result);
         <div class="container">
             <div class="title" style="float: left;">
                 <a href="../index.php" title="MyLiShop"> 
-                    <img src="../images/logo.png" width="260px;" height="180px;"> 
+                    <img src="../images/logo.png" width="230px;" height="auto;"> 
                 </a>
             </div>
             
@@ -102,7 +102,7 @@ $user_info = mysqli_fetch_assoc($result);
                     <ul>
                         <li><a href="profile.php" style="font-weight: bold;"><i class="fa fa-address-card"></i> Thông tin tài khoản</a></li>
                         <li><a href="change_password.php"><i class="fa fa-key"></i> Đổi mật khẩu</a></li>
-                        <li><a href="order_history.php"><i class="fa fa-list-alt"></i> Đơn hàng của tôi</a></li>
+                        <li><a href="order_history.php"><i class="fa fa-list-alt"></i> Lịch sử đặt phòng</a></li>
                         <li><a href="logout.php" style="color: #d9534f;"><i class="fa fa-sign-out"></i> Đăng xuất</a></li>
                     </ul>
                 </div>

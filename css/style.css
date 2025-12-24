@@ -1,3 +1,104 @@
+/*page-header admin*/
+.page-header {
+    color: #2C3E50; /* Xanh than logo */
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 3px solid #E67E22; /* Gạch chân cam đất logo */
+    padding-bottom: 5px;
+    margin: 20px 0;
+}
+/*admin weolcome*/
+/* admin/css/admin-style.css */
+
+.dashboard-container { 
+    padding: 30px; 
+}
+
+.stat-card {
+    padding: 30px 20px;
+    border-radius: 8px;
+    color: #fff;
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.stat-card:hover { 
+    transform: translateY(-5px); 
+    text-decoration: none; 
+    color: #fff; 
+    opacity: 0.9; 
+}
+
+.bg-blue { 
+    background: #4e73df; 
+}
+
+.bg-green { 
+    background: #1cc88a; 
+}
+
+.bg-yellow { 
+    background: #f6c23e; 
+}
+
+.stat-num { 
+    font-size: 38px; 
+    font-weight: bold; 
+    display: block; 
+}
+
+.stat-text { 
+    font-size: 16px; 
+    font-weight: 500; 
+    text-transform: uppercase; 
+}
+
+.panel-heading {
+    background: #f8f9fc; 
+    font-weight: bold;
+}
+
+.label-warning {
+    background-color: #f0ad4e;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 3px;
+}
+/* Nền màu xanh than bao quanh */
+.admin-welcome-box {
+    background-color: #2C3E50; /* Màu xanh than từ logo */
+    padding: 30px 0;
+    text-align: center;
+}
+
+/* Ô màu trắng chứa chữ */
+.admin-welcome-box .container {
+    background-color: white !important;
+    padding: 20px;
+    border-radius: 8px;
+    display: block; 
+    width: auto;
+    /* Bỏ mọi thuộc tính height nếu có để ô trắng tự giãn theo chữ */
+    height: auto !important; 
+}
+
+/* Chỉnh màu chữ bên trong ô trắng */
+.admin-welcome-box h1 {
+    color: #2C3E50 !important; /* Chữ xanh than để nổi bật trên nền trắng */
+    font-size: 24px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.admin-welcome-box p {
+    color: #555 !important; /* Màu xám đậm cho dòng mô tả */
+    margin: 0;
+    font-size: 16px;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -93,7 +194,7 @@ body {
 /* header-top */
 .header_top {
 	max-width: 100%;
-	background-color: #ff0000;
+	background-color:#C71585;
 	color: #fff;
 	font-size: 14px;
 }
@@ -138,7 +239,7 @@ body {
 }
 
 .account .fa {
-	color: #f00;
+	color: #C71585;
 }
 
 .register {
@@ -167,8 +268,73 @@ body {
 .register .btSubmit {
     margin-top: 20px;
 }
+/*change password */
 
 
+/* Header riêng cho trang tài khoản để bảo vệ Logo */
+.account-header {
+    background: #fff;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.account-header .title {
+    float: left;
+}
+
+.account-header .btn-home {
+    float: right;
+    padding-top: 65px; /* Căn giữa nút theo chiều dọc của logo */
+}
+
+/* Sidebar bên trái */
+.profile-sidebar {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.profile-sidebar h4 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #FF1493;
+    padding-bottom: 10px;
+}
+
+.profile-sidebar ul { list-style: none; padding: 0; }
+
+.profile-sidebar ul li a {
+    display: block;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    color: #555;
+    transition: all 0.3s;
+}
+
+.profile-sidebar ul li a:hover {
+    color: #FF1493 !important;
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+/* Nội dung bên phải */
+.profile-content {
+    background: #fff;
+    padding: 30px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.profile-content h3 {
+    margin-top: 0;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 25px;
+}
 /* menu cấp 1*/
 .navbar {
 	margin-top: 20px;
@@ -191,7 +357,139 @@ body {
 	color: #fbdd12;
 	background-color: #fff;
 }
+/* slide*/
+/* Container tràn viền sang trọng */
+.container-fluid-slide {
+    padding: 0;
+    margin-bottom: 30px;
+}
 
+/* Cố định chiều cao và nền chờ */
+.carousel-inner .item {
+    height: 480px;
+    background-color: #000;
+}
+
+/* Xử lý ảnh không bị méo (object-fit) */
+.carousel-inner img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover; 
+    object-position: center;
+}
+
+/* Tùy chỉnh nút điều hướng */
+.carousel-control {
+    background-image: none !important;
+    width: 5%;
+}
+
+.carousel-control .glyphicon {
+    font-size: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Đổ bóng cho chữ nổi bật */
+.carousel-caption h3, 
+.carousel-caption p {
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+}
+
+/* Lớp phủ mờ nhẹ lên ảnh */
+.item::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.15);
+}
+/* Màu cho mục đang được chọn (Đổi mật khẩu) */
+.profile-sidebar ul li a.menu-active {
+    font-weight: bold !important;
+    color: #2C3E50 !important; 
+}
+
+/* Màu riêng cho nút Đăng xuất */
+.profile-sidebar ul li a.menu-logout {
+    color: #d9534f !important; /* Màu đỏ cảnh báo */
+}
+
+/* Hiệu ứng khi di chuột vào nút đăng xuất */
+.profile-sidebar ul li a.menu-logout:hover {
+    color: #c9302c !important;
+    background-color: #f2dede; /* Nền đỏ nhạt khi hover */
+}
+/*lọc*/
+/* Khung bao bọc bộ lọc */
+.filter-wrapper {
+    margin: 20px 0;
+}
+
+.filter-box {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+/* Tiêu đề bộ lọc */
+.filter-title {
+    color: #2C3E50;
+    margin-top: 0;
+}
+
+/* Bố cục dàn hàng ngang */
+.form-inline-custom {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.form-group-custom label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Ô chọn dropdown */
+.form-control-custom {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    min-width: 180px;
+}
+
+/* Nút Lọc Phòng */
+.btn-submit-filter {
+    background: #2C3E50;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-submit-filter:hover {
+    background: #D81B60;
+}
+
+/* Nút Xóa Lọc */
+.btn-reset-filter {
+    background: #eee;
+    color: #333;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    display: inline-block;
+}
+
+.btn-reset-filter:hover {
+    background: #ddd;
+}
 /* area search*/
 .header-search {
 	width: 200px;
@@ -240,10 +538,12 @@ body {
 }
 
 /* Slide */
-.item {
-	height: 480px;
+.item img {
+    width: 100%;     
+    height: 480px;     
+    object-fit: cover;
+    object-position: center; 
 }
-
 .banner {
 	border-top: 5px solid #fff;
 }

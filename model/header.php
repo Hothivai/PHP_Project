@@ -48,7 +48,7 @@
     <div class="container">
         <!-- Logo -->
         <div class="title">
-            <a href="index.php" title="MyLiShop"> <img src="../images/logo.png" width="260px;" height="180px;"> </a>
+            <a href="index.php" title="MyLiShop"> <img src="../images/logo.png" width="230px;" height="auto"> </a>
         </div>
         <!-- /logo -->
         <div class="col-sm-12 col-md-12 account">
@@ -95,16 +95,16 @@
                         </li>
                         <li><a href="introduceshop.php"> Dịch Vụ </a>
                         </li>
-                        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sản Phẩm <b
+                        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Loại Phòng <b
                                     class="fa fa-caret-down"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="fashionboy.php"><i class="fa fa-caret-right"></i> Thời Trang Nam</a>
+                                <li><a href="fashionboy.php"><i class="fa fa-caret-right"></i> Phòng đơn</a>
                                 </li>
                                 <li class="divider"></li>
-                                <li><a href="fashiongirl.php"><i class="fa fa-caret-right"></i> Thời Trang Nữ</a>
+                                <li><a href="fashiongirl.php"><i class="fa fa-caret-right"></i> Phòng đôi</a>
                                 </li>
                                 <li class="divider"></li>
-                                <li><a href="newproduct.php"><i class="fa fa-caret-right"></i> Hàng Mới Về</a>
+                                <li><a href="newproduct.php"><i class="fa fa-caret-right"></i> Phòng có ưu đãi hot</a>
                                 </li>
                             </ul>
                         </li>
@@ -140,7 +140,7 @@
                                                     echo "0";
                                                 }
                                             ?>
-                                        </span> sản phẩm
+                                        </span> phòng
                                     </button>
                                 </a>
                                 <div class="mini-cart-content shopping_cart">

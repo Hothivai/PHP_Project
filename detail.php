@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Fashion VAIFASHION</title>
+    <title>VAI Hotel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" content="Fashion MyLiShop - fashion mylishop"/>
     <meta name="description" content="Fashion MyLiShop - fashion mylishop" />
@@ -76,13 +76,13 @@
                                         {
                                             $gia = $row['price'] - ($row['price'] / 100);
                                     ?>
-                                        <p class ="price">Giá củ: <?php echo $row['price']; ?><sup>đ</sup></p>
+                                        <p class ="price">Giá cũ: <?php echo $row['price']; ?><sup>đ</sup></p>
                                         <p class ="price">Giá giảm còn: <?php echo $gia; ?><sup>đ</sup></p>
                                     <?php
                                         } else
                                         {
                                     ?>
-                                            <p class ="price">Giá sản phẩm: <?php echo $row['price']; ?><sup>đ</sup></p>
+                                            <p class ="price">Giá phòng: <?php echo $row['price']; ?><sup>đ</sup></p>
                                     <?php
                                         }
                                     ?>
@@ -96,16 +96,16 @@
                                             </div> -->
                                             <div class="col-md-6">
                                                 <a href="addcart.php?id=<?php echo $row['id']; ?>">
-                                                    <button class="btn btn-warning btn-md"> Đặt mua </button>
+                                                    <button class="btn btn-warning btn-md"> Đặt phòng </button>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     
                                     <p style="padding-top: 30px;">
-                                        <span class ="fa fa-check-circle"></span>&nbsp;&nbsp;&nbsp;GIAO HÀNG TOÀN QUỐC<br>
-                                        <span class ="fa fa-check-circle"></span> &nbsp;&nbsp;THANH TOÁN KHI NHẬN HÀNG<br>
-                                        <span class ="fa fa-check-circle"></span>&nbsp;&nbsp; ĐỔI HÀNG TRONG 15 NGÀY
+                                       <span class ="fa fa-check-circle"></span>&nbsp;&nbsp;&nbsp;XÁC NHẬN ĐẶT PHÒNG TỨC THÌ<br>
+                                       <span class ="fa fa-check-circle"></span>&nbsp;&nbsp;&nbsp;HỖ TRỢ NHẬN PHÒNG SỚM (TÙY TÌNH TRẠNG)<br>
+                                       <span class ="fa fa-check-circle"></span>&nbsp;&nbsp;&nbsp;HỦY PHÒNG MIỄN PHÍ TRƯỚC 24H<br>
                                     </p>
                                 </div><!-- /.col -->
                                 <!-- // Thông tin sản phẩm -->

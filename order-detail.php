@@ -9,7 +9,7 @@ $order_id = isset($_GET['order_id']) ? (int)$_GET['order_id'] : '???';
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Đặt hàng Thành công!</title>
+    <title>Đặt phòng Thành công!</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <style>
         .success-container {
@@ -39,12 +39,12 @@ $order_id = isset($_GET['order_id']) ? (int)$_GET['order_id'] : '???';
         <div class="success-box">
             <span class="glyphicon glyphicon-ok-circle success-icon" aria-hidden="true"></span>
             
-            <h1>ĐẶT HÀNG THÀNH CÔNG!</h1>
+            <h1>ĐẶT PHÒNG THÀNH CÔNG!</h1>
             <p style="font-size: 1.2em;">
-                Đơn hàng của bạn đã được ghi nhận. Chúng tôi sẽ xử lý sớm nhất.
+                Yêu cầu đặt phòng của bạn đã được xác nhận. Chúng tôi rất mong được đón tiếp bạn.
             </p>
             <p style="font-size: 1.5em; font-weight: bold;">
-                Mã đơn hàng: <span class="text-primary">#<?php echo htmlspecialchars($order_id); ?></span>
+                Mã đặt phòng: <span class="text-primary">#<?php echo htmlspecialchars($order_id); ?></span>
             </p>
             
             <hr>

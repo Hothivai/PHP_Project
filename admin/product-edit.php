@@ -27,7 +27,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header"> Chỉnh sửa sản phẩm </h1>
+                    <h1 class="page-header"> Chỉnh sửa phòng </h1>
                 </div>
                 <!-- /.col-lg-12 -->
 
@@ -41,13 +41,13 @@
                     ?>
                                 <form action="productedit-back.php?idProduct=<?php echo $row['id']; ?>" method="POST" enctype="multipart/form-data">
                                     <div class="form-group">
-                                        <label> Tên sản phẩm </label>
+                                        <label> Tên phòng </label>
                                         <input type="text" class="form-control" name="txtName" value="<?php echo $row['name'] ?>" required>
                                     </div>
-                                    <!-- //Tên sản phẩm -->
+                                    <!-- //Tên phòng -->
 
                                     <div class="form-group">
-                                        <label> Danh mục sản phẩm </label>
+                                        <label> Danh mục phòng </label>
                                         <select class="form-control" name="category">
                                             <?php
     	                                        $idCategory = $row['category_id'];
@@ -75,23 +75,23 @@ $resCate = mysqli_query($conn,$sqlCate);
                                     <!-- //Danh mục sản phẩm -->
 
                                      <div class="form-group">
-                                        <label> Chọn hình ảnh sản phẩm </label>
+                                        <label> Chọn hình ảnh phòng </label>
                                         <input type="file" name="FileImage">
                                         <img src ="<?php echo $thumImage ?>" width="150px" height ="150px">
                                         <!-- <input type="hidden" name="image" value="<?php echo $row['image']; ?>"> -->
                                     </div>
-                                    <!-- //Hình ảnh sản phẩm -->
+                                    <!-- //Hình ảnh phòng -->
 
                                     <div class="form-group">
-                                        <label> Mô tả sản phẩm </label>
+                                        <label> Mô tả phòng </label>
                                         <textarea class="form-control" rows="3" name="txtDescript"><?php echo $row['description']; ?></textarea>
                                     </div>
-                                    <!-- //Mô tả sản phẩm -->
+                                    <!-- //Mô tả phòng -->
 
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xs-6">
                                             <div class="form-group">
-                                                <label> Giá sản phẩm </label>
+                                                <label> Giá phòng </label>
                                                 <input type ="number"  class="form-control" name="txtPrice" value="<?php echo $row['price']; ?>" required>
                                             </div>
                                         </div>
@@ -105,51 +105,45 @@ $resCate = mysqli_query($conn,$sqlCate);
                                     <!-- //Giá sản phẩm -->
 
                                     <div class="form-group">
-                                        <label> Số lượng sản phẩm </label>
-<input type="number" class="form-control" name="txtNumber" value="<?php echo $row['quantity']; ?>">
-                                    </div>
-                                    <!-- //Số lượng sản phẩm -->
-
-                                    <div class="form-group">
                                         <label> Nhập từ cho khách hàng tìm kiếm </label>
                                         <input class="form-control" name="txtKeyword" value="<?php echo $row['keyword']; ?>">
                                     </div>
                                     <!-- //keyword search sản phẩm -->
 
                                     <div class ="form-group">
-                                        <label> Tình trạng sản phẩm </label>
+                                        <label> Tình trạng phòng </label>
                                         <?php
                                             // status = 0 còn hàng, 1 hết hàng
                                             if ($row['status'] == 0)
                                             { 
                                         ?>
                                                 <label class="radio-inline">
-                                                    <input name="status" value="0" type="radio" checked=""> Còn hàng
+                                                    <input name="status" value="0" type="radio" checked=""> Còn phòng
                                                 </label>
                                                 <label class="radio-inline">
-                                                    <input name="status" value="1" id ="hide" type="radio"> Hết hàng
+                                                    <input name="status" value="1" id ="hide" type="radio"> Hết phòng
                                                 </label>
                                     <?php 
                                             } else
                                             {
                                     ?>
                                                 <label class="radio-inline">
-                                                    <input name="status" value="0" type="radio"> Còn hàng
+                                                    <input name="status" value="0" type="radio"> Còn phòng
                                                 </label>
                                                 <label class="radio-inline">
-                                                    <input name="status" value="1" id ="hide" type="radio" checked=""> Hết hàng
+                                                    <input name="status" value="1" id ="hide" type="radio" checked=""> Hết phòng
                                                 </label>
                                     <?php
                                             }
                                     ?>
                                     </div>
-                                    <!-- //Tình trạng đơn hàng -->
+                                    <!-- //Tình trạng phòng -->
     	                    <?php
     	                                }
     	                            }
     	                        }
     	                    ?>
-    	                    		<button type="submit" name="editProduct" class="btn btn-warning btn-lg">Chỉnh sửa sản phẩm</button>
+    	                    		<button type="submit" name="editProduct" class="btn btn-warning btn-lg">Chỉnh sửa phòng</button>
     	                		</form>
                 </div><!-- /.col -->
     	    </div><!-- /.row -->

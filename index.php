@@ -4,7 +4,6 @@
 ?>
 <?php
     session_start(); 
-    require_once('model/connect.php');
     $prd = 0;
     if (isset($_SESSION['cart']))
     {
@@ -12,33 +11,28 @@
     }
     
     
-    // Khởi tạo điều kiện lọc mặc định
-    $where_condition = " status = 0 "; 
+    $where_condition = " status = 0 "; // Trạng thái mặc định từ bảng
 
-    // 1. Xử lý Lọc theo Tình trạng (quantity)
-    if (isset($_GET['status_filter']) && !empty($_GET['status_filter'])) {
-        $status_filter = $_GET['status_filter'];
-        
-        if ($status_filter == 'con_hang') {
+    // 1. Lọc Tình trạng dựa trên cột quantity
+    if (isset($_GET['status_filter']) && $_GET['status_filter'] !== '') {
+        if ($_GET['status_filter'] == '1') {
             $where_condition .= " AND quantity > 0 ";
-        } elseif ($status_filter == 'het_hang') {
+        } else {
             $where_condition .= " AND quantity = 0 ";
         }
     }
 
-    // 2. Xử lý Lọc theo Khoảng Giá (price)
+    // 2. Lọc Giá - Ép kiểu cột price từ float sang số nguyên để so sánh chuẩn
     if (isset($_GET['price_range']) && !empty($_GET['price_range'])) {
-        $price_range = $_GET['price_range'];
-        
-        if ($price_range == 'duoi_150') {
-            $where_condition .= " AND price < 150000 ";
-        } elseif ($price_range == '150_300') {
-            $where_condition .= " AND price >= 150000 AND price <= 300000 ";
-        } elseif ($price_range == 'tren_300') {
-            $where_condition .= " AND price > 300000 ";
+        $range = $_GET['price_range'];
+        if ($range == 'duoi_1tr') {
+            $where_condition .= " AND CAST(price AS SIGNED) < 1000000 ";
+        } elseif ($range == '1tr_3tr') {
+            $where_condition .= " AND CAST(price AS SIGNED) BETWEEN 1000000 AND 3000000 ";
+        } elseif ($range == 'tren_3tr') {
+            $where_condition .= " AND CAST(price AS SIGNED) > 3000000 ";
         }
     }
-    
     // <<< KẾT THÚC LOGIC LỌC PHP >>>
 ?>
 <!DOCTYPE html>
@@ -47,7 +41,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Fashion VAIFASHION</title>
+    <title>VAI HOTEL</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="images/logohong.png">
 
@@ -70,40 +64,41 @@
         <?php include("model/slide.php"); ?>
         <?php include("model/banner.php"); ?>
         <div class="container">
-
-            <div class="filter-wrapper" style="margin-top: 20px; margin-bottom: 30px;">
-                <div class="filter-box" style="padding: 15px; border: 1px solid #ddd; border-radius: 5px; background-color: #f9f9f9;">
-                    <h4 style="margin-top: 0; margin-bottom: 15px;"><i class="fa fa-filter"></i> **Bộ lọc sản phẩm**</h4>
-                    <form action="" method="GET" class="form-inline">
-                        
-                        <div class="form-group" style="margin-right: 20px;">
-                            <label for="status_filter" style="font-weight: normal;">Tình trạng:</label>
-                            <select name="status_filter" class="form-control">
-                                <option value="">-- Tất cả --</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group" style="margin-right: 20px;">
-                            <label for="price_range" style="font-weight: normal;">Khoảng giá:</label>
-                            <select name="price_range" class="form-control">
-                                <option value="">-- Tất cả --</option>
-                                <option value="duoi_150" <?php echo (isset($_GET['price_range']) && $_GET['price_range'] == 'duoi_150') ? 'selected' : ''; ?>>Dưới 150.000đ</option>
-                                <option value="150_300" <?php echo (isset($_GET['price_range']) && $_GET['price_range'] == '150_300') ? 'selected' : ''; ?>>150.000đ - 300.000đ</option>
-                                <option value="tren_300" <?php echo (isset($_GET['price_range']) && $_GET['price_range'] == 'tren_300') ? 'selected' : ''; ?>>Trên 300.000đ</option>
-                            </select>
-                        </div>
-
-                        <button type="submit" class="btn btn-info">Lọc</button>
-                        <a href="index.php" class="btn btn-default">Xóa Lọc</a>
-                    </form>
-                </div>
+           
+        <div class="filter-wrapper">
+    <div class="filter-box">
+        <h4 class="filter-title"><i class="fa fa-filter"></i> Tìm phòng VAI Luxury</h4>
+        <form action="index.php" method="GET" class="form-inline-custom">
+            <div class="form-group-custom">
+                <label>Tình trạng:</label>
+                <select name="status_filter" class="form-control-custom">
+                    <option value="">-- Tất cả --</option>
+                    <option value="1" <?php if(isset($_GET['status_filter']) && $_GET['status_filter'] == '1') echo 'selected'; ?>>Còn phòng</option>
+                    <option value="0" <?php if(isset($_GET['status_filter']) && $_GET['status_filter'] == '0') echo 'selected'; ?>>Hết phòng</option>
+                </select>
             </div>
+            <div class="form-group-custom">
+                <label>Giá phòng:</label>
+                <select name="price_range" class="form-control-custom">
+                    <option value="">-- Tất cả giá --</option>
+                    <option value="duoi_1tr" <?php if(isset($_GET['price_range']) && $_GET['price_range'] == 'duoi_1tr') echo 'selected'; ?>>Dưới 1.000.000đ</option>
+                    <option value="1tr_3tr" <?php if(isset($_GET['price_range']) && $_GET['price_range'] == '1tr_3tr') echo 'selected'; ?>>1tr - 3tr</option>
+                    <option value="tren_3tr" <?php if(isset($_GET['price_range']) && $_GET['price_range'] == 'tren_3tr') echo 'selected'; ?>>Trên 3tr</option>
+                </select>
+            </div>
+            <div class="filter-actions">
+                <button type="submit" class="btn-submit-filter">LỌC PHÒNG</button>
+                <a href="index.php" class="btn-reset-filter">XÓA LỌC</a>
+            </div>
+        </form>
+    </div>
+</div>
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="product-main">
                         
                         <div class="title-product-main">
-                            <h3 class="section-title">Sản phẩm mới</h3>
+                            <h3 class="section-title">Phòng có ưu đãi hot</h3>
                         </div>
                         <div class="content-product-main">
                             <div class="row">
@@ -130,7 +125,7 @@
                                         <div class="product-info">
                                             <a href="addcart.php?id=<?php echo $kq['id']; ?>">
                                                 <button type="button" class="btn btn-primary">
-                                                    <label style="color: red;">&hearts;</label> Mua hàng <label
+                                                    <label style="color: red;">&hearts;</label> Đặt phòng <label
                                                         style="color: red;">&hearts;</label>
                                                 </button>
                                             </a>
@@ -142,7 +137,7 @@
                                             </a>
                                         </div></div></div><?php } ?>
                             </div></div><div class="title-product-main">
-                            <h3 class="section-title">Thời Trang Nam</h3>
+                            <h3 class="section-title">Phòng đơn</h3>
                         </div>
                         <div class="content-product-main">
                             <div class="row">
@@ -170,7 +165,7 @@
                                         <div class="product-info">
                                             <a href="addcart.php?id=<?php echo $kq['id']; ?>">
                                                 <button type="button" class="btn btn-primary">
-                                                    <label style="color: red;">&hearts;</label> Mua hàng <label
+                                                    <label style="color: red;">&hearts;</label> Đặt phòng <label
                                                         style="color: red;">&hearts;</label>
                                                 </button>
                                             </a>
@@ -182,7 +177,7 @@
                                             </a>
                                         </div></div></div><?php } ?>
                             </div></div><div class="title-product-main">
-                            <h3 class="section-title">Thời Trang Nữ</h3>
+                            <h3 class="section-title">Phòng đôi</h3>
                         </div>
                         <div class="content-product-main">
                             <div class="row">
@@ -210,7 +205,7 @@
                                         <div class="product-info">
                                             <a href="addcart.php?id=<?php echo $kq['id']; ?>">
                                                 <button type="button" class="btn btn-primary">
-                                                    <label style="color: red;">&hearts;</label> Mua hàng <label
+                                                    <label style="color: red;">&hearts;</label> Đặt phòng <label
                                                         style="color: red;">&hearts;</label>
                                                 </button>
                                             </a>

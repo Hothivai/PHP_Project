@@ -74,7 +74,7 @@ error_reporting(0);
 </head>
 
 <body>
-    <h2 class="section-title">BANNER - KPNV27</h2>
+    <h2 class="section-title">WELCOME TO VAI HOTEL</h2>
     <div class="banner-container">
         <?php 
         if (mysqli_num_rows($result) > 0) {

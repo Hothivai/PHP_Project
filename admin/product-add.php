@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thêm Sản Phẩm</title>
+    <title>Thêm Phòng</title>
 
     <link rel="stylesheet" href="../css/bootstrap.min.css"> 
     <link rel="stylesheet" href="../css/style.css"> 
@@ -30,17 +30,17 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-            <h1 class="page-header"> Thêm sản phẩm </h1>
+            <h1 class="page-header"> Thêm phòng </h1>
             </div><div class="col-lg-7" style="padding-bottom:120px">
                 <form action="productadd-back.php" method="POST" enctype="multipart/form-data">
                     
                     <div class="form-group">
-                        <label> Tên sản phẩm </label>
-                        <input type="text" class="form-control" name="txtName" placeholder="Nhập tên sản phẩm" required />
+                        <label> Tên phòng </label>
+                        <input type="text" class="form-control" name="txtName" placeholder="Nhập tên phòng" required />
                     </div>
                     
                     <div class="form-group">
-                        <label> Danh mục sản phẩm </label>
+                        <label> Danh mục phòng </label>
                         <select class="form-control" name="category">
                             <?php
                             $sql = "SELECT * FROM categories";
@@ -61,9 +61,9 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-xs-6">
                             <div class="form-group">
-                                <label> Giá sản phẩm </label>
+                                <label> Giá phòng </label>
                                 <input type="number" class="form-control" name="txtPrice"
-                                    placeholder="Nhập giá sản phẩm" min="20000" required />
+                                    placeholder="Nhập giá phòng" min="20000" required />
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-6">
@@ -76,13 +76,7 @@
                     </div>
                     
                     <div class="form-group">
-                        <label> Số lượng sản phẩm </label>
-                        <input type="number" class="form-control" name="txtNumber" placeholder="Nhập số lượng sản phẩm"
-                            required />
-                    </div>
-                    
-                    <div class="form-group">
-                        <label> Chọn hình ảnh sản phẩm </label>
+                        <label> Chọn hình ảnh phòng </label>
                         <input type="file" name="FileImage" required>
                         <span style="color: red"><?php echo $noimage; ?></span> 
                     </div>
@@ -93,7 +87,7 @@
                     </div>
                     
                     <div class="form-group">
-                        <label> Mô tả sản phẩm </label>
+                        <label> Mô tả phòng </label>
                         <textarea class="form-control" rows="3" name="txtDescript"></textarea>
                     </div>
                     

@@ -48,15 +48,21 @@ alert(\"Thêm sản phẩm thất bại!\");
 <div id="page-wrapper">
     <div class="container-fluid">
         <div class="row">
+            <div class="admin-welcome-box">
+               <div class="container">
+                  <h1>Chào mừng bạn đến với Trang Quản trị VAI Luxury Hotel</h1>
+                  <p>Hệ thống quản lý phòng và dịch vụ lưu trú cao cấp</p>
+                </div>
+            </div>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <h1 class="page-header"> Danh sách sản phẩm </h1>
+                <h1 class="page-header"> Danh sách phòng </h1>
             </div><!-- /.col -->
             <div class="col-lg-6 col-md-6 col-sm-6 " style="padding-top: 30px;">
                 <a href="../index.php" class="btn btn-primary">
                     Quay lại trang chủ
                </a>
                <a href="product-add.php" class="btn btn-success add-btn">
-                  <i class="fa fa-plus-circle"></i> Thêm sản phẩm mới
+                  <i class="fa fa-plus-circle"></i> Thêm phòng mới
                </a>
             </div>
 
@@ -65,7 +71,7 @@ alert(\"Thêm sản phẩm thất bại!\");
                 <thead>
                     <tr align="center">
                         <th> STT </th>
-                        <th> Tên sản phẩm </th>
+                        <th> Tên phòng </th>
                         <th> Mã danh mục </th>
                         <th> Hình ảnh </th>
                         <th> Giá </th>

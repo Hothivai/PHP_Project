@@ -30,7 +30,7 @@ function get_status_text($status_code) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Đơn Hàng Của Tôi</title>
+    <title>Phòng Của Tôi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css"> 
     <link rel="stylesheet" href="../css/style.css"> 
@@ -49,7 +49,7 @@ function get_status_text($status_code) {
         <div class="container">
             <div class="title" style="float: left;">
                 <a href="../index.php" title="MyLiShop"> 
-                    <img src="../images/logo.png" width="260px;" height="180px;"> 
+                    <img src="../images/logo.png" width="230px;" height="auto;"> 
                 </a>
             </div>
             
@@ -69,7 +69,7 @@ function get_status_text($status_code) {
                     <ul>
                         <li><a href="profile.php"><i class="fa fa-address-card"></i> Thông tin tài khoản</a></li>
                         <li><a href="change_password.php"><i class="fa fa-key"></i> Đổi mật khẩu</a></li>
-                        <li><a href="order_history.php" style="font-weight: bold;"><i class="fa fa-list-alt"></i> Đơn hàng của tôi</a></li>
+                        <li><a href="order_history.php" style="font-weight: bold;"><i class="fa fa-list-alt"></i> Phòng Của Tôi</a></li>
                         <li><a href="logout.php" style="color: #d9534f;"><i class="fa fa-sign-out"></i> Đăng xuất</a></li>
                     </ul>
                 </div>
@@ -77,17 +77,17 @@ function get_status_text($status_code) {
             
             <div class="col-md-9">
                 <div class="profile-content">
-                    <h3>Lịch Sử Đơn Hàng</h3>
+                    <h3>Lịch Sử Đặt Phòng</h3>
                     
                     <?php if (mysqli_num_rows($result) > 0): ?>
                     <table class="table table-bordered table-striped">
                         <thead>
                             <tr>
-                                <th>Mã Đơn Hàng</th>
-                                <th>Ngày Đặt</th>
-                                <th>Tổng Tiền</th>
-                                <th>Trạng Thái</th>
-                                <th>Hành Động</th>
+                                <th>Mã Đặt Phòng</th>
+                                <th>Ngày Đặt / Check-in</th>
+                                <th>Tổng Thanh toán</th>
+                                <th>Tình trạng</th>
+                                <th>Chi tiết</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -105,7 +105,7 @@ function get_status_text($status_code) {
                         </tbody>
                     </table>
                     <?php else: ?>
-                        <div class="alert alert-info">Bạn chưa có đơn hàng nào.</div>
+                        <div class="alert alert-info">Bạn chưa đặt phòng nào.</div>
                     <?php endif; ?>
                 </div>
             </div>

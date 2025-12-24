@@ -54,7 +54,7 @@
                 	<div class="product-main">
                         <!-- Thời Trang Nữ -->
                         <div class="title-product-main">
-                            <h3 class="section-title">Thời Trang Nữ</h3>
+                            <h3 class="section-title">Phòng đôi</h3>
                         </div>
                         <div class="content-product-main">
                             <div class="row">
@@ -79,7 +79,7 @@
                                                 <div class="product-info">
                                                     <a href="addcart.php?id=<?php echo $kq['id']; ?>">
                                                         <button type="button" class="btn btn-primary">
-                                                            <label style="color: red;">&hearts;</label> Mua hàng  <label style="color: red;">&hearts;</label>
+                                                            <label style="color: red;">&hearts;</label> Đặt phòng <label style="color: red;">&hearts;</label>
                                                         </button>
                                                     </a>
                                                     <a href="detail.php?id=<?php echo $kq['id']; ?>">
@@ -105,7 +105,7 @@
     <!-- partner -->
     <div class="container">
         <div class="title-product-main">
-            <h3 class="section-title">Hãng Thời Trang Nổi Tiếng</h3>
+            <h3 class="section-title">Tiện Nghi Khách Sạn</h3>
         </div>
         <?php include("model/partner.php"); ?>
     </div>

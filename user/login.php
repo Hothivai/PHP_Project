@@ -57,7 +57,7 @@
 	    <div class="container">
 	        <!-- Logo -->
 	        <div class="title">
-	            <a href="../index.php" title="MyLiShop"> <img src="../images/logo.png" width="260px;" height="180px;"> </a>
+	            <a href="../index.php" title="MyLiShop"> <img src="../images/logo.png" width="230px;" height="auto;"> </a>
 	        </div>
 	        <!-- /logo -->
 	        <div class="col-sm-12 col-md-12 account">
@@ -86,27 +86,24 @@
 	        <!-- Menu -->
 	        <nav class="navbar navbar-default" role="navigation">
 	            <div class="container-fluid">
-	                <!-- Brand and toggle get grouped for better mobile display -->
 	                <div class="navbar-header">
 	                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
-	                    <!-- <a class="navbar-brand" href="#">MyLiShop</a> -->
 	                </div>
-	                <!-- Collect the nav links, forms, and other content for toggling -->
 	                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	                    <ul class="nav navbar-nav">
 	                        <li><a href="../index.php">Trang Chủ</a>
 	                        </li>
 	                        <li><a href="../introduceshop.php">Dịch Vụ</a>
 	                        </li>
-	                        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sản Phẩm <b class="fa fa-caret-down"></b></a>
+	                        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Loại phòng <b class="fa fa-caret-down"></b></a>
 	                            <ul class="dropdown-menu">
-	                                <li><a href="../fashionboy.php"><i class="fa fa-caret-right"></i> Thời Trang Nam</a>
+	                                <li><a href="../fashionboy.php"><i class="fa fa-caret-right"></i> Phòng đơn</a>
 	                                </li>
 	                                <li class="divider"></li>
-	                                <li><a href="../fashiongirl.php"><i class="fa fa-caret-right"></i> Thời Trang Nữ</a>
+	                                <li><a href="../fashiongirl.php"><i class="fa fa-caret-right"></i> Phòng đôi</a>
 	                                </li>
 	                                <li class="divider"></li>
-	                                <li><a href="../newproduct.php"><i class="fa fa-caret-right"></i> Hàng Mới Về</a>
+	                                <li><a href="../newproduct.php"><i class="fa fa-caret-right"></i> Phòng có giá ưu đãi hot</a>
 	                                </li>
 	                            </ul>
 	                        </li>
@@ -134,14 +131,10 @@
 	                        </form>
 	                    </ul>
 	                </div>
-	                <!-- /.navbar-collapse -->
 	            </div>
-	            <!-- /.container-fluid -->
 	        </nav>
 	    </div>
-	    <!-- /Menu ngang header -->
 	</header>
-	<!-- /header -->
 
 	<div class="container" style="margin-top: 40px;">
 		<div class="row">

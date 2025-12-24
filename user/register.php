@@ -106,7 +106,7 @@
                     <!-- panel-footer -->
                     <div class="panel-footer ">
                         <center>
-                            <img src="../images/logo.png" width="230px;" height="110px;">
+                            <img src="../images/logo.png" width="230px;" height="auto;">
                         </center>
                     </div><!-- /panel-footer -->
 

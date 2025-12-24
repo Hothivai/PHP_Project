@@ -66,18 +66,13 @@
     <!-- /header -->
 
     <div class="container">
-        <ul class="breadcrumb">
-            <li><a href="index.php">Trang chủ</a></li>
-            <li>Tìm kiếm sản phẩm</li>
-        </ul><!-- /breadcrumb -->
-        <!-- Content -->
         <div class="container">
         	<div class="row">
             	<div class="col-md-12 col-sm-12 col-xs-12">
                 	<div class="product-main">
                     	<div class="title-product-main">
                         	<h3 class="section-title"> Kết Quả Tìm Kiếm </h3>
-                            <p style="color: black; margin-left: 10px;">Có <?php echo $totalnumber; ?> sản phẩm được tìm thấy</p>
+                            <p style="color: black; margin-left: 10px;">Có <?php echo $totalnumber; ?> phòng được tìm thấy</p>
                     	</div>
                         <div class="content-product-main">
                             <div class="row">
@@ -100,11 +95,12 @@
                                                     Giá: <?php echo $kq['price']; ?><sup> đ</sup>
                                                 </div>
                                                 <div class="product-info">
-                                                    <!-- <a href="addcart.php?id=<?php echo $kq['id']; ?>">
-                                                        <button type="button" class="btn btn-primary">
-                                                            <label style="color: red;">&hearts;</label> Mua hàng  <label style="color: red;">&hearts;</label>
+                                                    <a href="addcart.php?id=<?php echo $kq['id']; ?>">
+                                                       <button type="button" class="btn btn-primary">
+                                                          <label style="color: red;">&hearts;</label> Đặt phòng <label
+                                                           style="color: red;">&hearts;</label>
                                                         </button>
-                                                    </a> -->
+                                                    </a>
                                                     <a href="detail.php?id=<?php echo $kq['id']; ?>">
                                                         <button type="button" class="btn btn-primary">
                                                             <label style="color: red;">&hearts;</label> Chi Tiết <label style="color: red;">&hearts;</label>
@@ -120,7 +116,7 @@
                                 <?php
                                         if($i <= 0)
                                         {
-                                            echo "KÍNH CHÀO QUÝ KHÁCH VÀ XIN LỖI VÌ SẢN PHẨM BẠN TÌM KHÔNG TỒN TẠI!";
+                                            echo "KÍNH CHÀO QUÝ KHÁCH VÀ XIN LỖI VÌ PHÒNG BẠN TÌM KHÔNG TỒN TẠI!";
                                         }
                                 ?>
                                     </div>

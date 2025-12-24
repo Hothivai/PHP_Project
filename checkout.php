@@ -112,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="row">
         <div class="col-md-6">
             <form method="post" action="checkout.php">
-                <h3>Thông tin giao hàng</h3>
+                <h3>Thông tin khách lưu trú</h3>
                 <div class="form-group">
                     <label for="name">Họ và Tên (*)</label>
                     <input type="text" class="form-control" id="name" name="name" required>
@@ -126,18 +126,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <input type="tel" class="form-control" id="phone" name="phone" required>
                 </div>
                 <div class="form-group">
-                    <label for="address">Địa chỉ giao hàng (*)</label>
+                    <label for="address">Yêu cầu đặc biệt / Ghi chú</label>
                     <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
                 </div>
                 
-                <button type="submit" class="btn btn-success btn-lg btn-block mt-4">Đặt hàng và Thanh toán</button>
+                <button type="submit" class="btn btn-success btn-lg btn-block mt-4">Xác nhận Đặt phòng & Thanh toán</button>
             </form>
-            <a href="view-cart.php" class="btn btn-default btn-block mt-2">Quay lại giỏ hàng</a>
+            <a href="view-cart.php" class="btn btn-default btn-block mt-2">Quay lại chọn phòng</a>
 
         </div>
         
         <div class="col-md-6">
-            <h3>Tóm tắt đơn hàng (<?php echo $_SESSION['selected_count']; ?> sản phẩm)</h3>
+            <h3>Tóm tắt đặt chỗ (<?php echo $_SESSION['selected_count']; ?> Phòng)</h3>
             <ul class="list-group">
                 <?php 
                 if (isset($_SESSION['selected_ids']) && isset($_SESSION['cart'])):

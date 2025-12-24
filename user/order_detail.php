@@ -74,7 +74,7 @@ function get_status_text($status_code) {
         <div class="container">
             <div class="title" style="float: left;">
                 <a href="../index.php" title="MyLiShop"> 
-                    <img src="../images/logo.png" width="260px;" height="180px;"> 
+                    <img src="../images/logo.png" width="230px;" height="auto;"> 
                 </a>
             </div>
             
@@ -94,7 +94,7 @@ function get_status_text($status_code) {
                     <ul>
                         <li><a href="profile.php"><i class="fa fa-address-card"></i> Thông tin tài khoản</a></li>
                         <li><a href="change_password.php"><i class="fa fa-key"></i> Đổi mật khẩu</a></li>
-                        <li><a href="order_history.php" style="font-weight: bold;"><i class="fa fa-list-alt"></i> Đơn hàng của tôi</a></li>
+                        <li><a href="order_history.php" style="font-weight: bold;"><i class="fa fa-list-alt"></i> Phòng của tôi</a></li>
                         <li><a href="logout.php" style="color: #d9534f;"><i class="fa fa-sign-out"></i> Đăng xuất</a></li>
                     </ul>
                 </div>
@@ -102,28 +102,28 @@ function get_status_text($status_code) {
             
             <div class="col-md-9">
                 <div class="profile-content">
-                    <h3>Chi Tiết Đơn Hàng #<?php echo $order_id; ?></h3>
+                    <h3>Chi Tiết Đặt Phòng #<?php echo $order_id; ?></h3>
                     
                     <div class="panel panel-info">
                         <div class="panel-heading">
                             <h4 class="panel-title">Thông Tin Chung</h4>
                         </div>
                         <div class="panel-body">
-                            <p><strong>Ngày đặt hàng:</strong> <?php echo date('d/m/Y H:i:s', strtotime($order_info['date_order'])); ?></p>
-                            <p><strong>Trạng thái:</strong> <?php echo get_status_text($order_info['status']); ?></p>
-                            <p><strong>Địa chỉ nhận hàng:</strong> <?php echo htmlspecialchars($order_info['address'] ?? 'Chưa cập nhật'); ?></p> 
-                            <p><strong>Tổng tiền:</strong> <span style="font-size: 1.2em; color: #d9534f;"><?php echo number_format($order_info['total'], 0, ',', '.'); ?> đ</span></p>
+                            <p><strong>Ngày đặt phòng:</strong> <?php echo date('d/m/Y H:i:s', strtotime($order_info['date_order'])); ?></p>
+                            <p><strong>Tình trạng:</strong> <?php echo get_status_text($order_info['status']); ?></p>
+                            <p><strong>Yêu cầu đặc biệt / Ghi chú:</strong> <?php echo htmlspecialchars($order_info['address'] ?? 'Chưa cập nhật'); ?></p> 
+                            <p><strong>Tổng thanh toán:</strong> <span style="font-size: 1.2em; color: #d9534f;"><?php echo number_format($order_info['total'], 0, ',', '.'); ?> đ</span></p>
                         </div>
                     </div>
 
-                    <h4>Danh Sách Sản Phẩm</h4>
+                    <h4>Dịch Vụ Đã Đặt</h4>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th>Sản Phẩm</th>
+                                <th>Loại phòng / Gói dịch vụ</th>
                                 <th>Đơn Giá</th>
-                                <th>Số Lượng</th>
-                                <th>Thành Tiền</th>
+                                <th>Số lượng phòng</th>
+                                <th>Tổng chi phí dịch vụ</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -145,12 +145,12 @@ function get_status_text($status_code) {
                             </tr>
                             <?php endwhile; ?>
                             <tr>
-                                <td colspan="3" style="text-align: right;"><strong>Tổng giá trị hàng:</strong></td>
+                                <td colspan="3" style="text-align: right;"><strong>Tổng thanh toán:</strong></td>
                                 <td><strong><?php echo number_format($tong_tien_hang, 0, ',', '.'); ?> đ</strong></td>
                             </tr>
                         </tbody>
                     </table>
-                    <a href="order_history.php" class="btn btn-default"><i class="fa fa-arrow-left"></i> Quay lại Danh sách đơn hàng</a>
+                    <a href="order_history.php" class="btn btn-default"><i class="fa fa-arrow-left"></i> Quay lại Danh sách đặt phòng</a>
                 </div>
             </div>
         </div>
